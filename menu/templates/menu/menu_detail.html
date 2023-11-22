@@ -32,7 +32,7 @@
           {% if ancestors %}
             {% for ancestor in ancestors %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'menu:menu' ancestor.pk %}">{{ ancestor.name|title }}</a>
+                <a class="nav-link" href="{% url 'menu:menu' ancestor.name %}">{{ ancestor.name|title }}</a>
               </li>
             {% endfor %}
           {% endif %}
@@ -76,7 +76,7 @@
               <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
                 <strong class="d-block text-gray-dark">{{ descendant.name }}</strong>
                 <small class="d-block text-right mt-3">
-                  <a href="{% url 'menu:menu' descendant.pk %}">Перейти</a>
+                  <a href="{% url 'menu:menu' descendant.name %}">Перейти</a>
                 </small>
               </p>
             </div>

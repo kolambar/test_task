@@ -7,5 +7,5 @@ app_name = MenuConfig.name
 
 
 urlpatterns = [
-    path('menu/<int:pk>/', MenuDetailView.as_view(), name='menu'),
+    path('menu/<slug:name>/', MenuDetailView.as_view(), name='menu'),
 ]
